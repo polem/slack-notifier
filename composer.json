@@ -1,0 +1,16 @@
+{
+    "name": "polem/slack-php",
+    "description": "A simple slack wrapper",
+    "require": {
+        "guzzle/guzzle": "~3"
+    },
+    "authors": [
+        {
+            "name": "Paul-Emile MINY",
+            "email": "paulemile.miny@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {"Slack\\": "src/"}
+    }
+}

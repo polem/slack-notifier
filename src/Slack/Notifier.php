@@ -4,7 +4,7 @@ namespace Slack;
 
 use Guzzle\Http\Client;
 
-class Slack
+class Notifier
 {
     private $team;
     private $token;
@@ -18,7 +18,7 @@ class Slack
         $this->client->setDefaultOption('query', array('token' => $this->token));
     }
 
-    public function send($message, $parameters) {
+    public function notify($message, $parameters) {
         $payload = array();
         $payload['text'] = $message;
 

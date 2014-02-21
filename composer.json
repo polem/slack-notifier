@@ -1,5 +1,5 @@
 {
-    "name": "polem/slack-php",
+    "name": "polem/slack-notifier",
     "description": "A simple slack wrapper",
     "require": {
         "guzzle/guzzle": "~3"

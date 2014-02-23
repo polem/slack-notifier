@@ -1,5 +1,7 @@
 # Slack notifier
 
+[![Build Status](https://secure.travis-ci.org/polem/slack-notifier.png)](http://travis-ci.org/polem/slack-notifier)
+
 ## Installation
 
 `composer require slack-notifier`

@@ -2,20 +2,13 @@
 
 namespace Slack;
 
-use Guzzle\Http\Client;
-
 class Notifier
 {
-    private $team;
-    private $token;
+    private $client;
 
-    public function __construct($team, $token)
+    public function __construct($client)
     {
-        $this->team  = $team;
-        $this->token = $token;
-
-        $this->client = new Client(sprintf("https://%s.slack.com", $this->team));
-        $this->client->setDefaultOption('query', array('token' => $this->token));
+        $this->client = $client;
     }
 
     public function notify($message, $parameters) {

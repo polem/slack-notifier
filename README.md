@@ -11,7 +11,7 @@
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
-$slack = new Slack\Client('your_team', 'your_token');
+$client = new Slack\Client('your_team', 'your_token');
 $slack = new Slack\Notifier($client);
 
 $slack->notify('test', array(

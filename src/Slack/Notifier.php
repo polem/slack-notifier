@@ -11,7 +11,7 @@ class Notifier
         $this->client = $client;
     }
 
-    public function notify($message, $parameters) {
+    public function notify($message, $parameters, $debug = false) {
         $payload = array();
         $payload['text'] = $message;
 
@@ -20,13 +20,13 @@ class Notifier
             'icon_emoji' => ':ghost:'
         );
 
-        $payload = json_encode(array_merge($payload, $parameters, $default_parameters));
+        $payload = json_encode(array_merge($payload, $default_parameters, $parameters));
 
         $request = $this->client->post(
             '/services/hooks/incoming-webhook',
             array(),
             $payload,
-            array('debug' => true)
+            array('debug' => $debug)
         );
 
         $response = $request->send();

@@ -44,12 +44,14 @@ class NotifierTest extends \PHPUnit_Framework_TestCase
             'channel' => '#test'
         );
 
-        $expectedDatas = json_encode(array(
-            'text'       => $message,
-            'channel'    => $parameters['channel'],
-            'username'   => 'slack-php',
-            'icon_emoji' => ':ghost:'
-        ));
+        $expectedDatas = json_encode(
+            array(
+                'text'       => $message,
+                'username'   => 'slack-php',
+                'icon_emoji' => ':ghost:',
+                'channel'    => $parameters['channel']
+            )
+        );
 
         $client->expects($this->once())
             ->method('post')

@@ -19,7 +19,7 @@ class GetSetMethodNormalizer extends BaseGetSetMethodNormalizer
         $attributes = array();
 
         foreach ($camelizedKeyAttributes as $name => $value) {
-            if (!$value) {
+            if (!isset($value)) {
                 continue;
             }
             $attributes[$this->fromCamelCase($name)] = $value;

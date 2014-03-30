@@ -47,13 +47,15 @@ class NotifierTest extends \PHPUnit_Framework_TestCase
             ->setIconEmoji(':ghost:')
             ->setUsername('slack-php');
 
-        $attachement = new \Slack\Message\MessageAttachement();
+        $attachment = new \Slack\Message\MessageAttachment();
         $field = new \Slack\Message\MessageField();
         $field
             ->setTitle('foo')
-            ->setValue('bar');
-        $attachement->addField($field);
-        $message->addAttachement($attachement);
+            ->setValue('bar')
+            ->setShort(false);
+
+        $attachment->addField($field);
+        $message->addAttachment($attachment);
 
 
         $expectedDatas = json_encode(
@@ -62,12 +64,13 @@ class NotifierTest extends \PHPUnit_Framework_TestCase
                 'channel'    => $message->getChannel(),
                 'username'   => 'slack-php',
                 'icon_emoji' => ':ghost:',
-                'attachements' => array(
+                'attachments' => array(
                     array(
                         'fields' => array(
                             array(
                                 'title' => 'foo',
-                                'value' => 'bar'
+                                'value' => 'bar',
+                                'short' => false
                             )
                         )
                     )

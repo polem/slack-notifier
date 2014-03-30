@@ -14,7 +14,7 @@ class Message implements MessageInterface
     protected $username;
     protected $icon_emoji;
     protected $icon_url;
-    protected $attachements = array();
+    protected $attachments = array();
 
     /**
      * __construct
@@ -138,33 +138,33 @@ class Message implements MessageInterface
     }
 
     /**
-     * addAttachement
+     * addAttachment
      *
-     * @param MessageAttachement $attachement
+     * @param MessageAttachment $attachment
      */
-    public function addAttachement(MessageAttachement $attachement)
+    public function addAttachment(MessageAttachment $attachment)
     {
-        $this->attachements[] = $attachement;
+        $this->attachments[] = $attachment;
     }
 
     /**
-     * Get attachements.
+     * Get attachments.
      *
-     * @return attachements.
+     * @return attachments.
      */
-    public function getAttachements()
+    public function getAttachments()
     {
-        return $this->attachements;
+        return $this->attachments;
     }
 
     /**
-     * Set attachements.
+     * Set attachments.
      *
-     * @param attachements the value to set.
+     * @param attachments the value to set.
      */
-    public function setAttachements($attachements)
+    public function setAttachments($attachments)
     {
-        $this->attachements = $attachements;
+        $this->attachments = $attachments;
 
         return $this;
     }

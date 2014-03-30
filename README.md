@@ -27,7 +27,7 @@ $message->setChannel('#test')
 $slack->notify($message);
 ```
 
-### With attachements
+### With attachments
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
@@ -36,14 +36,14 @@ $client = new Slack\Client('your_team', 'your_token');
 $slack = new Slack\Notifier($client);
 
 $message = new Slack\Message\Message('Hello world');
-$attachement = new Slack\Message\MessageAttachement();
+$attachment = new Slack\Message\MessageAttachment();
 $field = new Slack\Message\MessageField();
 $field
     ->setTitle('foo')
     ->setValue('bar');
 
-$attachement->addField($field);
-$message->addAttachement($attachement);
+$attachment->addField($field);
+$message->addAttachment($attachment);
 
 $message->setChannel('#test')
     ->setIconEmoji(':ghost:')

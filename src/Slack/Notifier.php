@@ -15,24 +15,35 @@ class Notifier
      *
      * @var mixed
      */
-    private $client;
+    protected $client;
+
+    /**
+     * serializer
+     *
+     * @var mixed
+     */
+    protected $serializer;
 
     /**
      * __construct
      *
      * @param mixed $client
+     * @param mixed $serializer
      */
-    public function __construct($client)
+    public function __construct($client, $serializer = null)
     {
+        if (!$serializer) {
+            $normalizer = new GetSetMethodNormalizer();
+            $normalizer->setCamelizedAttributes(array('icon_emoji', 'icon_url'));
+
+            $serializer = new Serializer(
+                array($normalizer),
+                array(new JsonEncoder())
+            );
+        }
+
         $this->client = $client;
-
-        $normalizer = new GetSetMethodNormalizer();
-        $normalizer->setCamelizedAttributes(array('icon_emoji', 'icon_url'));
-
-        $this->serializer = new Serializer(
-            array($normalizer),
-            array(new JsonEncoder())
-        );
+        $this->serializer = serializer;
     }
 
     /**

@@ -52,6 +52,6 @@ class Notifier
             array('debug' => $debug)
         );
 
-        $response = $request->send();
+        $request->send();
     }
 }

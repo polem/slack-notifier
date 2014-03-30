@@ -2,25 +2,48 @@
 
 namespace Slack;
 
+use Slack\Message\MessageInterface;
+
+use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Slack\Serializer\Normalizer\GetSetMethodNormalizer;
+
 class Notifier
 {
+    /**
+     * client
+     *
+     * @var mixed
+     */
     private $client;
 
+    /**
+     * __construct
+     *
+     * @param mixed $client
+     */
     public function __construct($client)
     {
         $this->client = $client;
+
+        $normalizer = new GetSetMethodNormalizer();
+        $normalizer->setCamelizedAttributes(array('icon_emoji', 'icon_url'));
+
+        $this->serializer = new Serializer(
+            array($normalizer),
+            array(new JsonEncoder())
+        );
     }
 
-    public function notify($message, $parameters, $debug = false) {
-        $payload = array();
-        $payload['text'] = $message;
-
-        $default_parameters = array(
-            'username'   => 'slack-php',
-            'icon_emoji' => ':ghost:'
-        );
-
-        $payload = json_encode(array_merge($payload, $default_parameters, $parameters));
+    /**
+     * notify
+     *
+     * @param MessageInterface $message
+     * @param boolean          $debug
+     */
+    public function notify(MessageInterface $message, $debug = false)
+    {
+        $payload = $this->serializer->serialize($message, 'json');
 
         $request = $this->client->post(
             '/services/hooks/incoming-webhook',
@@ -32,4 +55,3 @@ class Notifier
         $response = $request->send();
     }
 }
-

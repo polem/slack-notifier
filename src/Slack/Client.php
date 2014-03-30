@@ -13,4 +13,3 @@ class Client extends GuzzleClient
         $this->setDefaultOption('query', array('token' => $token));
     }
 }
-

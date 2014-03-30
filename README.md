@@ -10,13 +10,44 @@
 
 ## Usage
 
+### Simple
+
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
 $client = new Slack\Client('your_team', 'your_token');
 $slack = new Slack\Notifier($client);
 
-$slack->notify('test', array(
-    'channel' => '#channel'
-));
+$message = new Slack\Message\Message('Hello world');
+
+$message->setChannel('#test')
+    ->setIconEmoji(':ghost:')
+    ->setUsername('slack-php');
+
+$slack->notify($message);
+```
+
+### With attachements
+
+```php
+require __DIR__ . '/vendor/autoload.php';
+
+$client = new Slack\Client('your_team', 'your_token');
+$slack = new Slack\Notifier($client);
+
+$message = new Slack\Message\Message('Hello world');
+$attachement = new Slack\Message\MessageAttachement();
+$field = new Slack\Message\MessageField();
+$field
+    ->setTitle('foo')
+    ->setValue('bar');
+
+$attachement->addField($field);
+$message->addAttachement($attachement);
+
+$message->setChannel('#test')
+    ->setIconEmoji(':ghost:')
+    ->setUsername('slack-php');
+
+$slack->notify($message);
 ```

@@ -43,7 +43,7 @@ class Notifier
         }
 
         $this->client = $client;
-        $this->serializer = serializer;
+        $this->serializer = $serializer;
     }
 
     /**

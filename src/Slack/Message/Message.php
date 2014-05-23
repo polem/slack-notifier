@@ -14,6 +14,7 @@ class Message implements MessageInterface
     protected $username;
     protected $icon_emoji;
     protected $icon_url;
+    protected $link_names;
     protected $attachments = array();
 
     /**
@@ -133,6 +134,28 @@ class Message implements MessageInterface
     public function setIconUrl($icon_url)
     {
         $this->icon_url = $icon_url;
+
+        return $this;
+    }
+
+    /**
+     * Get link_names.
+     *
+     * @return link_names.
+     */
+    public function getLinkNames()
+    {
+        return $this->link_names;
+    }
+
+    /**
+     * Set link_names.
+     *
+     * @param link_names the value to set.
+     */
+    public function enableLinkNames($link_names)
+    {
+        $this->link_names = $link_names;
 
         return $this;
     }

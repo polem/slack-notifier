@@ -55,4 +55,4 @@ $slack->notify($message);
 
 ### Message
 
-If your message contain @username and you want him to be notified, add `$message->setLinkNames(1)
+If your message contain @username and you want him to be notified, add `$message->enableLinkNames(true)

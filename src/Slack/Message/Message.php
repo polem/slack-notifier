@@ -153,7 +153,7 @@ class Message implements MessageInterface
      *
      * @param link_names the value to set.
      */
-    public function setLinkNames($link_names)
+    public function enableLinkNames($link_names)
     {
         $this->link_names = $link_names;
 

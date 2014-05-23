@@ -18,6 +18,6 @@
     "require-dev": {
         "phpunit/phpunit": "~3"
     },
-    "bin": ["bin/slack"]
+    "bin": ["bin/slack"],
     "license": "MIT"
 }

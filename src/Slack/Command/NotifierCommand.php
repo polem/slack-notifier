@@ -75,7 +75,7 @@ class NotifierCommand extends Command
 
             $message->setIconEmoji($input->getOption('emoji'));
         }
-        $ret = $slack->notify($message);
-        $output->writeln($ret);
+        $slack->notify($message);
+        $output->writeln("Sent!");
     }
 }

@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+
+define('BEHAT_BIN_PATH',     __FILE__);
+
+function includeIfExists($file)
+{
+    if (file_exists($file)) {
+        return include $file;
+    }
+}
+
+if ((!$loader = includeIfExists(__DIR__.'/../vendor/autoload.php')) && (!$loader = includeIfExists(__DIR__.'/../../../autoload.php'))) {
+    fwrite(STDERR,
+        'You must set up the project dependencies, run the following commands:'.PHP_EOL.
+        'curl -s http://getcomposer.org/installer | php'.PHP_EOL.
+        'php composer.phar install'.PHP_EOL
+    );
+    exit(1);
+}
+
+use Slack\Command\NotifierCommand;
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+$application->add(new NotifierCommand());
+$application->run();

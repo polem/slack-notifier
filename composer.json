@@ -3,8 +3,8 @@
     "description": "A simple slack wrapper",
     "require": {
         "guzzle/guzzle": "~3",
-        "symfony/serializer": "v2.4.2",
-        "symfony/console": "v2.4.2"
+        "symfony/serializer": "~2.4",
+        "symfony/console": "~2.4"
     },
     "authors": [
         {

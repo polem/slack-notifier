@@ -10,11 +10,30 @@ class MessageAttachment
     protected $pretext;
     protected $color;
     protected $fields;
+    protected $title;
 
     public function __construct()
     {
     }
 
+    /**
+     * addTitle
+     *
+     * @param MessageTitle $title
+     */
+     public function addTitle($title) {
+        $this->title = $title;
+
+        return $this;    
+     }
+    /**
+     * getTitle
+     *
+     * @return title
+     */
+     public function getTitle() {
+        return $this->title;
+     }
     /**
      * addField
      *

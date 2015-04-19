@@ -22,6 +22,7 @@ $slack = new Slack\Notifier($client);
 $message = new Slack\Message\Message('Hello world');
 
 $message->setChannel('#test')
+    ->setMrkdwn(true)
     ->setIconEmoji(':ghost:')
     ->setUsername('slack-php');
 
@@ -39,6 +40,7 @@ $slack = new Slack\Notifier($client);
 $message = new Slack\Message\Message('Hello world');
 $attachment = new Slack\Message\MessageAttachment();
 $attachment
+    ->setMrkdwnIn(array('pretext', 'text', 'fields'))
     ->setFallback('fallback text')
     ->setPretext('Pretext text')
     ->setAuthorName('Author Name')

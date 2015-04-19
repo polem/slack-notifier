@@ -16,6 +16,7 @@ class MessageAttachment
     protected $pretext;
     protected $color;
     protected $fields;
+    protected $mrkdwn_in;
 
     public function __construct()
     {
@@ -151,7 +152,7 @@ class MessageAttachment
     public function setTitle($title)
     {
         $this->title = $title;
-        return $this;    
+        return $this;
     }
 
     /**
@@ -161,7 +162,7 @@ class MessageAttachment
      */
     public function getTitle()
     {
-        return $this->title;    
+        return $this->title;
     }
 
     /**
@@ -172,7 +173,7 @@ class MessageAttachment
     public function setTitleLink($title_link)
     {
         $this->title_link = $title_link;
-        return $this;    
+        return $this;
     }
 
     /**
@@ -182,7 +183,7 @@ class MessageAttachment
      */
     public function getTitleLink()
     {
-        return $this->title_link;    
+        return $this->title_link;
     }
 
     /**
@@ -193,7 +194,7 @@ class MessageAttachment
     public function setAuthorName($author_name)
     {
         $this->author_name= $author_name;
-        return $this;    
+        return $this;
     }
 
     /**
@@ -203,7 +204,7 @@ class MessageAttachment
      */
     public function getAuthorName()
     {
-        return $this->author_name;     
+        return $this->author_name;
     }
 
     /**
@@ -214,7 +215,7 @@ class MessageAttachment
     public function setAuthorLink($author_link)
     {
         $this->author_link = $author_link;
-        return $this;    
+        return $this;
     }
 
     /**
@@ -224,7 +225,7 @@ class MessageAttachment
      */
     public function getAuthorLink()
     {
-        return $this->author_link;     
+        return $this->author_link;
     }
 
 
@@ -236,7 +237,7 @@ class MessageAttachment
     public function setAuthorIcon($author_icon)
     {
         $this->author_icon = $author_icon;
-        return $this;    
+        return $this;
     }
 
     /**
@@ -246,7 +247,7 @@ class MessageAttachment
      */
     public function getAuthorIcon()
     {
-        return $this->author_icon;     
+        return $this->author_icon;
     }
     /**
      * Set image_url.
@@ -256,7 +257,7 @@ class MessageAttachment
     public function setImageUrl($image_url)
     {
         $this->image_url = $image_url;
-        return $this;    
+        return $this;
     }
 
     /**
@@ -266,6 +267,28 @@ class MessageAttachment
      */
     public function getImageUrl()
     {
-        return $this->image_url;     
+        return $this->image_url;
+    }
+
+    /**
+     * Set mrkdwn_in property
+     *
+     * @param array of fields to set markdown in
+     */
+    public function setMrkdwnIn($mrkdwn_in)
+    {
+        $this->mrkdwn_in = $mrkdwn_in;
+
+        return $this;
+    }
+
+    /**
+     * Get mrkdwn_in property
+     *
+     * @return array mrkdwn_in
+     */
+    public function getMrkdwnIn()
+    {
+        return $this->mrkdwn_in;
     }
 }

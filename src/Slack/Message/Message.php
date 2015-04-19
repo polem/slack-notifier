@@ -16,6 +16,7 @@ class Message implements MessageInterface
     protected $icon_url;
     protected $link_names;
     protected $attachments = array();
+    protected $mrkdwn;
 
     /**
      * __construct
@@ -190,5 +191,27 @@ class Message implements MessageInterface
         $this->attachments = $attachments;
 
         return $this;
+    }
+
+    /**
+     * Set mrkdwn
+     *
+     * @param boolean
+     */
+    public function setMrkdwn($mrkdwn)
+    {
+        $this->mrkdwn = $mrkdwn;
+
+        return $this;
+    }
+
+    /**
+     * Get mrkdwn property
+     *
+     * @return boolean mrkdwn property
+     */
+    public function getMrkdwn()
+    {
+        return $this->mrkdwn;
     }
 }

@@ -62,6 +62,7 @@ class Notifier
             $payload,
             array('debug' => $debug)
         );
+        print $payload;
 
         $request->send();
     }

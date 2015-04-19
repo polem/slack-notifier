@@ -16,6 +16,7 @@ class MessageAttachment
     protected $pretext;
     protected $color;
     protected $fields;
+    protected $mrkdwn_in;
 
     public function __construct()
     {
@@ -267,5 +268,27 @@ class MessageAttachment
     public function getImageUrl()
     {
         return $this->image_url;     
+    }
+
+    /**
+     * Set mrkdwn_in property
+     *
+     * @param array of fields to set markdown in
+     */
+    public function setMrkdwnIn($mrkdwn_in)
+    {
+        $this->mrkdwn_in = $mrkdwn_in;
+
+        return $this;
+    }
+
+    /**
+     * Get mrkdwn_in property
+     *
+     * @return array mrkdwn_in
+     */
+    public function getMrkdwnIn()
+    {
+        return $this->mrkdwn_in;
     }
 }

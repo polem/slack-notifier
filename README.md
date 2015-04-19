@@ -38,6 +38,15 @@ $slack = new Slack\Notifier($client);
 
 $message = new Slack\Message\Message('Hello world');
 $attachment = new Slack\Message\MessageAttachment();
+$attachment
+    ->setFallback('fallback text')
+    ->setPretext('Pretext text')
+    ->setAuthorName('Author Name')
+    ->setAuthorLink('Author Link')
+    ->setAuthorIcon('Author Icon')
+    ->setTitle('Title')
+    ->setTitleLink('http://github.com')
+    ->setImageUrl('http://github.com/image.jpg');
 $field = new Slack\Message\MessageField();
 $field
     ->setTitle('foo')

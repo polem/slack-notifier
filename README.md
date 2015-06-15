@@ -7,7 +7,7 @@
 
 ## Installation
 
-`composer require slack-notifier`
+`composer require polem/slack-notifier`
 
 ## Usage
 

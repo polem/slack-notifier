@@ -5,7 +5,7 @@ namespace Slack\Message;
 /**
  * Class: Message
  *
- * @see MessageInterface
+ * @see Slack\Message\MessageInterface
  */
 class Message implements MessageInterface
 {
@@ -29,9 +29,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Get text.
+     * Get text
      *
-     * @return text.
+     * @return string
      */
     public function getText()
     {
@@ -39,9 +39,10 @@ class Message implements MessageInterface
     }
 
     /**
-     * Set text.
+     * Set text
      *
-     * @param  string           $text the value to set.
+     * @param string $text the value to set
+     *
      * @return MessageInterface
      */
     public function setText($text)
@@ -52,9 +53,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Get channel.
+     * Get channel
      *
-     * @return channel.
+     * @return string
      */
     public function getChannel()
     {
@@ -62,9 +63,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Set channel.
+     * Set channel
      *
-     * @param channel the value to set.
+     * @param string $channel the value to set
      */
     public function setChannel($channel)
     {
@@ -74,9 +75,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Get username.
+     * Get username
      *
-     * @return username.
+     * @return string
      */
     public function getUsername()
     {
@@ -84,9 +85,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Set username.
+     * Set username
      *
-     * @param username the value to set.
+     * @param string $username the value to set
      */
     public function setUsername($username)
     {
@@ -96,9 +97,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Get icon_emoji.
+     * Get icon_emoji
      *
-     * @return icon_emoji.
+     * @return string
      */
     public function getIconEmoji()
     {
@@ -106,9 +107,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Set icon_emoji.
+     * Set icon_emoji
      *
-     * @param icon_emoji the value to set.
+     * @param string $icon_emoji the value to set
      */
     public function setIconEmoji($icon_emoji)
     {
@@ -118,9 +119,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Get icon_url.
+     * Get icon_url
      *
-     * @return icon_url.
+     * @return string
      */
     public function getIconUrl()
     {
@@ -128,9 +129,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Set icon_url.
+     * Set icon_url
      *
-     * @param icon_url the value to set.
+     * @param string $icon_url the value to set
      */
     public function setIconUrl($icon_url)
     {
@@ -140,9 +141,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Get link_names.
+     * Get link_names
      *
-     * @return link_names.
+     * @return string
      */
     public function getLinkNames()
     {
@@ -150,9 +151,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Set link_names.
+     * Set link_names
      *
-     * @param link_names the value to set.
+     * @param string $link_names the value to set
      */
     public function enableLinkNames($link_names)
     {
@@ -172,9 +173,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Get attachments.
+     * Get attachments
      *
-     * @return attachments.
+     * @return MessageAttachment[] attachments
      */
     public function getAttachments()
     {
@@ -182,9 +183,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Set attachments.
+     * Set attachments
      *
-     * @param attachments the value to set.
+     * @param MessageAttachment[] attachments the value to set
      */
     public function setAttachments($attachments)
     {
@@ -194,9 +195,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Set mrkdwn
+     * Set markdown
      *
-     * @param boolean
+     * @param boolean $mrkdwn
      */
     public function setMrkdwn($mrkdwn)
     {
@@ -206,9 +207,9 @@ class Message implements MessageInterface
     }
 
     /**
-     * Get mrkdwn property
+     * Get markdown property
      *
-     * @return boolean mrkdwn property
+     * @return boolean
      */
     public function getMrkdwn()
     {

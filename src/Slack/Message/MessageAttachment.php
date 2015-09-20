@@ -193,7 +193,7 @@ class MessageAttachment
      */
     public function setAuthorName($author_name)
     {
-        $this->author_name= $author_name;
+        $this->author_name = $author_name;
         return $this;
     }
 
@@ -249,6 +249,7 @@ class MessageAttachment
     {
         return $this->author_icon;
     }
+
     /**
      * Set image_url
      *

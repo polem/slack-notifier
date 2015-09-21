@@ -35,9 +35,9 @@ class MessageAttachment
     }
 
     /**
-     * Get fields.
+     * Get fields
      *
-     * @return fields.
+     * @return MessageField[] fields
      */
     public function getFields()
     {
@@ -45,9 +45,9 @@ class MessageAttachment
     }
 
     /**
-     * Set fields.
+     * Set fields
      *
-     * @param fields the value to set.
+     * @param MessageField[] $fields the value to set
      */
     public function setFields($fields)
     {
@@ -57,9 +57,9 @@ class MessageAttachment
     }
 
     /**
-     * Get fallback.
+     * Get fallback
      *
-     * @return fallback.
+     * @return string
      */
     public function getFallback()
     {
@@ -67,9 +67,9 @@ class MessageAttachment
     }
 
     /**
-     * Set fallback.
+     * Set fallback
      *
-     * @param fallback the value to set.
+     * @param string $fallback the value to set
      */
     public function setFallback($fallback)
     {
@@ -79,9 +79,9 @@ class MessageAttachment
     }
 
     /**
-     * Get text.
+     * Get text
      *
-     * @return text.
+     * @return string
      */
     public function getText()
     {
@@ -89,9 +89,9 @@ class MessageAttachment
     }
 
     /**
-     * Set text.
+     * Set text
      *
-     * @param text the value to set.
+     * @param string $text the value to set
      */
     public function setText($text)
     {
@@ -101,9 +101,9 @@ class MessageAttachment
     }
 
     /**
-     * Get pretext.
+     * Get pretext
      *
-     * @return pretext.
+     * @return string
      */
     public function getPretext()
     {
@@ -111,9 +111,9 @@ class MessageAttachment
     }
 
     /**
-     * Set pretext.
+     * Set pretext
      *
-     * @param pretext the value to set.
+     * @param string $pretext the value to set
      */
     public function setPretext($pretext)
     {
@@ -123,9 +123,9 @@ class MessageAttachment
     }
 
     /**
-     * Get color.
+     * Get color
      *
-     * @return color.
+     * @return string
      */
     public function getColor()
     {
@@ -133,9 +133,9 @@ class MessageAttachment
     }
 
     /**
-     * Set color.
+     * Set color
      *
-     * @param color the value to set.
+     * @param string $color the value to set
      */
     public function setColor($color)
     {
@@ -145,9 +145,9 @@ class MessageAttachment
     }
 
     /**
-     * Set title.
+     * Set title
      *
-     * @param title the value to set.
+     * @param string $title the value to set
      */
     public function setTitle($title)
     {
@@ -156,9 +156,9 @@ class MessageAttachment
     }
 
     /**
-     * Get title.
+     * Get title
      *
-     * @return title.
+     * @return string
      */
     public function getTitle()
     {
@@ -166,9 +166,9 @@ class MessageAttachment
     }
 
     /**
-     * Set title_link.
+     * Set title_link
      *
-     * @param title_link the value to set.
+     * @param string $title_link the value to set
      */
     public function setTitleLink($title_link)
     {
@@ -177,9 +177,9 @@ class MessageAttachment
     }
 
     /**
-     * Get title_link.
+     * Get title_link
      *
-     * @return title_link.
+     * @return string
      */
     public function getTitleLink()
     {
@@ -187,20 +187,20 @@ class MessageAttachment
     }
 
     /**
-     * Set author_name.
+     * Set author_name
      *
-     * @param author_name the value to set.
+     * @param string $author_name the value to set
      */
     public function setAuthorName($author_name)
     {
-        $this->author_name= $author_name;
+        $this->author_name = $author_name;
         return $this;
     }
 
     /**
-     * Get author_name.
+     * Get author_name
      *
-     * @return author_name.
+     * @return $string author_name
      */
     public function getAuthorName()
     {
@@ -208,9 +208,9 @@ class MessageAttachment
     }
 
     /**
-     * Set author_link.
+     * Set author_link
      *
-     * @param author_link the value to set.
+     * @param string $author_link the value to set
      */
     public function setAuthorLink($author_link)
     {
@@ -219,9 +219,9 @@ class MessageAttachment
     }
 
     /**
-     * Get author_link.
+     * Get author_link
      *
-     * @return author_link.
+     * @return string
      */
     public function getAuthorLink()
     {
@@ -230,9 +230,9 @@ class MessageAttachment
 
 
     /**
-     * Set author_icon.
+     * Set author_icon
      *
-     * @param author_icon the value to set.
+     * @param string $author_icon the value to set
      */
     public function setAuthorIcon($author_icon)
     {
@@ -241,18 +241,19 @@ class MessageAttachment
     }
 
     /**
-     * Get author_icon.
+     * Get author_icon
      *
-     * @return author_icon.
+     * @return string
      */
     public function getAuthorIcon()
     {
         return $this->author_icon;
     }
+
     /**
-     * Set image_url.
+     * Set image_url
      *
-     * @param image_url the value to set.
+     * @param string $image_url the value to set
      */
     public function setImageUrl($image_url)
     {
@@ -261,9 +262,9 @@ class MessageAttachment
     }
 
     /**
-     * Get image_url.
+     * Get image_url
      *
-     * @return image_url.
+     * @return string
      */
     public function getImageUrl()
     {
@@ -273,7 +274,7 @@ class MessageAttachment
     /**
      * Set mrkdwn_in property
      *
-     * @param array of fields to set markdown in
+     * @param string[] $$mrkdwn_in array of fields to set markdown in
      */
     public function setMrkdwnIn($mrkdwn_in)
     {
@@ -285,7 +286,7 @@ class MessageAttachment
     /**
      * Get mrkdwn_in property
      *
-     * @return array mrkdwn_in
+     * @return string[] mrkdwn_in
      */
     public function getMrkdwnIn()
     {

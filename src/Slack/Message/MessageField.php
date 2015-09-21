@@ -9,9 +9,9 @@ class MessageField
     protected $short;
 
     /**
-     * Get title.
+     * Get title
      *
-     * @return title.
+     * @return string
      */
     public function getTitle()
     {
@@ -19,9 +19,9 @@ class MessageField
     }
 
     /**
-     * Set title.
+     * Set title
      *
-     * @param title the value to set.
+     * @param string $title the value to set
      */
     public function setTitle($title)
     {
@@ -31,9 +31,9 @@ class MessageField
     }
 
     /**
-     * Get value.
+     * Get value
      *
-     * @return value.
+     * @return string
      */
     public function getValue()
     {
@@ -41,9 +41,9 @@ class MessageField
     }
 
     /**
-     * Set value.
+     * Set value
      *
-     * @param value the value to set.
+     * @param string $value the value to set
      */
     public function setValue($value)
     {
@@ -53,9 +53,9 @@ class MessageField
     }
 
     /**
-     * Get short.
+     * Get short
      *
-     * @return short.
+     * @return string
      */
     public function getShort()
     {
@@ -63,9 +63,9 @@ class MessageField
     }
 
     /**
-     * Set short.
+     * Set short
      *
-     * @param short the value to set.
+     * @param string $short the value to set
      */
     public function setShort($short)
     {
